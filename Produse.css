@@ -1,0 +1,96 @@
+
+
+            ul{
+                margin: 2px;
+                padding: 0;
+                list-style: none;
+            }
+            
+            
+            a{
+                margin: 0;
+                text-align: center;
+                /* padding: 10px; */
+                background: #4398ff;
+                color: black;
+                display: block;
+                text-decoration: none;
+            }
+            
+            .meniu>li{
+                display: inline-block;
+                border: 1px solid;
+                padding: 10px;
+                background-color: #74b3ff;
+                
+            }
+            
+            .submeniu{
+                display: none;
+                float: right;
+            }
+            
+            .submeniu li{
+                border: 2px solid;
+                position: relative;
+            }
+            
+            li:hover>a, .meniu>li:hover{
+                background-color: rgb(246, 148, 255);
+                transition: 1s;
+            }
+            
+            .meniu>li:hover .submeniu{
+                display: block;
+            }
+
+            .dropdown{
+                background-color: pink;
+            }
+            
+
+            .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  background-color: #2196F3;
+  padding: 2px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+  min-width: 450px;
+}
+
+
+            .laptop , .telefon, .tableta{
+                float: left;
+                width: 250px;
+            }
+
+            .grid-item>h4{
+                color: rgb(143, 47, 223);
+            }
+
+
+@media only screen and (max-width: 600px) {
+    .grid-container
+	{
+        display: grid;
+  grid-template-columns: auto;
+  background-color: #2196F3;
+  padding: 2px;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 601px){
+    .grid-container
+	{
+        display: grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 2px;
+    }
+}
