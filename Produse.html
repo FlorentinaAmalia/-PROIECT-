@@ -1,10 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin online</title>
+    <!-- <link rel="shortcut icon" href="/poze/kitty1.gif" type="image/x-icon"> -->
+    <link rel="icon" href="/poze/index.ico" type="image/gif">
+        <link rel="stylesheet" href="Produse.css">
+        <script src="Produse.js"></script>
 </head>
-<body>
-$END$
-</body>
+<body onload="color()">
+
+        <div class="header_produse">
+            <h1>Produse</h1>
+        </div>
+        <nav class="dropdown">
+            <ul class="meniu">
+                <li><a href="home.html">Acasa</a></li>
+                <li><a href="Produse.html">Produse</a>
+                    <!-- <ul class="submeniu">
+                        <li><a href="#home">Bine ați venit!</a></li>
+                        <li><a href="#scheduale">Program</a></li>
+                        <li><a href="#news">Noutăți</a></li>
+                        <li><a href="#notice">Anunțuri</a></li>
+                        <li><a href="galerie.html" target="_blank">Galerie</a></li>
+                    </ul> -->
+                </li>
+                <li>
+                    <img src="/icons/lupa.png" id="lupa"><input id="searchbar" onkeyup="search_product()" type="text"
+                    name="search" placeholder="Cauta produsul..."></li>
+
+          </nav>
+
+          <!-- <input id="searchbar" onkeyup="search_product()" type="text"
+          name="search" placeholder="Cauta produsul..."> -->
+
+          <div class="grid-container">
+            <div class="grid-item" id="l1">
+                <img src='/poze_produse/laptop1.png' class="laptop">
+                <ul class="produs_descriere">
+                    <li>Notebook Laptop Acer Aspire 5 A515-45</li>
+                    <li>Diagonala: 15.6 inch</li>
+                    <li>Familie: Ryzen 3 5000 Series</li>
+                    <li>Frecventa: 2,6 GHz</li>
+                    <li>Capacitate: 8 GB</li>
+                    <li>Capacitate SSD: 512 GB</li>
+                </ul>
+        </div>
+            <div class="grid-item" id="l2">
+                <img src="/poze_produse/laptop2.png"  class="laptop">
+            
+                <ul class="produs_descriere">
+                    <li> Ultrabook IdeaPad 5 Pro 14ACN6</li>
+                    <li>Diagonala: 14 inch</li>
+                    <li>Familie: Ryzen 7 5000 Series</li>
+                    <li>Frecventa: 1,9 GHz</li>
+                    <li>Capacitate: 16 GB</li>
+                    <li>Capacitate SSD: 512 GB</li>
+             </ul>
+            </div>
+            <div class="grid-item" id="l3">
+                <img src="/poze_produse/laptop3.png" class="laptop">
+                <ul class="produs_descriere">
+                <li>Ultrabook Yoga Slim 9 14ITL5</li>
+                <li>Diagonala: 13.3 inch</li>
+                <li>Familie: Ryzen 5 5000 Series</li>
+                <li>Frecventa: 2,3 GHz</li>
+                <li>Capacitate: 16 GB</li>
+                <li>Capacitate SSD: 512 GB </li>
+                </ul>
+        </div>
+            <div class="grid-item" id="t1">
+                <img src="/poze_produse/telefon1.png" class="telefon">
+                    <ul class="produs_descriere">      
+                    <li>Smartphone Samsung Galaxy A03</li>
+                    <li>Rezolutie: 720 x 1600 pixeli</li>
+                    <li>Marime display: 6.5 inch</li>
+                    <li>Frecventa: 1600 MHz</li>
+                    <li>Nuclee: Octa Core</li>
+                    <li>RAM: 4 GB</li>
+                    <li>Sistem operare: Android OS</li>
+                </ul>  
+
+            </div>
+            <div class="grid-item" id="t2">
+                <img src="/poze_produse/telefon2.png" class="telefon">
+            <ul class="produs_descriere">
+                <li>Smartphone Apple iPhone 13</li>
+                <li>Rezolutie: 1170 x 2532 pixeli</li>
+                <li>Marime display: 6.1 inch</li>
+                <li>Nuclee: Hexa Core</li>
+                <li>RAM: 4 GB</li>
+                <li>Sistem operare: iOS</li>
+            </ul>
+
+            </div>
+            <div class="grid-item" id="t3">
+                <img src="poze_produse/telefon3.png" class="telefon">
+                <ul class="produs_descriere">
+                <li>Smartphone Samsung Galaxy S22</li>
+                <li>Rezolutie: 1080 x 2340 pixeli</li>
+               <li> Marime display: 6.1 inch</li>
+               <li> Frecventa: 2800 + 2500 + 1700 MHz</li>
+               <li> Nuclee: Octa Core</li>
+               <li> RAM: 8 GB</li>
+               <li> Sistem operare: Android OS</li>
+                </ul>
+
+            </div>
+
+            <div class="grid-item" id="ta1">
+                <img src="poze_produse/tableta1.png" class="tableta">
+                <ul class="produs_descriere">
+                <li>Tableta Samsung Galaxy Tab A8</li>
+                  <li>  Diagonala: 10.5 inch</li>
+                  <li>  Rezolutie: 1920 x 1200 pixeli</li>
+                  <li>  Frecventa: 2000 + 2000 MHz</li>
+                  <li>  Capacitate RAM: 3 GB</li>
+                  <li>  Capacitate: 32 GB</li>
+                  <li>  Sistem de operare: Android 11</li>
+
+
+                </ul>
+            </div>
+
+            <div class="grid-item" id="ta2">
+                <img src="poze_produse/tableta2.png" class="tableta">
+                <ul class="produs_descriere">
+                <li>Tableta Huawei MatePad T10s</li>
+               <li> Diagonala: 10.1 inch</li>
+               <li> Rezolutie: 1920 x 1200 pixeli</li>
+               <li> Frecventa: 2000 + 1700 MHz</li>
+              <li>  Capacitate RAM: 4 GB</li>
+              <li>  Capacitate: 128 GB</li>
+              <li>  Sistem de operare: Android 10</li>
+                </ul>
+            </div>
+
+            <div class="grid-item" id="ta3">
+                <img src="poze_produse/tableta3.png" class="tableta">
+                <ul class="produs_descriere">
+                  <li> Tableta Apple iPad Air 2020</li>          
+                  <li>  Diagonala: 10.9 inch</li>
+                  <li>  Rezolutie: 2360 x 1640 pixeli</li>
+                  <li>  Capacitate: 64 GB</li>
+                  <li>  Sistem de operare: iPadOS 14</li>
+
+
+                </ul>
+            </div>
+          </div> 
+
+          <div class="error">
+          <iframe src="404.html" id="err"></iframe></div>
+
+
+          <div id="random">
+            <input type="radio" name="radioGroup" value="1"> roz<br>
+            <input type="radio" name="radioGroup" value="2"> rosu<br>
+            <input type="radio" name="radioGroup" value="3"> verde<br>
+            <input type="radio" name="radioGroup" value="4"> albastru<br>
+            <input type="radio" name="radioGroup" value="5"> galben<br>
+            </div>
+
+            <!-- <div id="rnd"></div> -->
+            <div id="bg_image">
+                <img src="poze/background_site1.jpg" id="bg_img">
+                <img src="poze/background_site2.jpg" id="bg_img">
+                <img src="poze/background_site3.jpg" id="bg_img">
+                <img src="poze/background_site4.jpg" id="bg_img">
+                <img src="poze/background_site5.jpg" id="bg_img">
+            </div>
+    </body>
 </html>

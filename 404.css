@@ -1,0 +1,21 @@
+.body{
+    background-color: #FCF0E4;
+}
+h1{
+    /* position: relative; */
+    position: absolute;
+    left: 35%;
+    top: 55vh;
+    font-size: 5vw;
+    color: #4C2A0F;
+    
+}
+
+.cat{
+    display: block;
+    position: relative;
+    top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25vw;
+}
