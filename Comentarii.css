@@ -1,0 +1,130 @@
+body{
+    /* background-color: red; */
+    background-image: url('poze/background_site.jpg');
+}
+/* Drop-down */
+nav {
+    height: 2rem;
+    width: auto;
+    background-color: rgb(125, 188, 240);
+    position: sticky;
+    top: 0em;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    display: block;
+    height: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav > ul.meniu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+nav > ul.meniu li {
+    flex-grow: 1;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: rgb(125, 188, 240);
+}
+
+nav > ul.meniu > li > ul.submeniu {
+    visibility: hidden;
+}
+
+nav > ul.meniu > li:hover > ul.submeniu {
+    visibility: visible;
+    background-color: rgb(125, 188, 240);
+    /* position: relative; */
+}
+
+nav > ul.meniu a:hover {
+    transition: background-color 3s;
+    background-color: rgb(71, 113, 148);
+    color: rgb(0, 0, 0);
+}
+
+nav > ul.meniu li {
+    transition: background-color 2s;
+}
+
+#lupa{
+    position: relative;
+    height: 1.5em;
+    top: 5px;
+    left: -2px;
+}
+#searchbar{
+    width: 70%;
+    height: 1.5rem;
+    position: relative;
+    top: -2px;
+    border-radius: 10px;
+}
+/* ___________________________ */
+
+
+.container_comentarii {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.container_comentarii{
+    top: 10vh;
+    left: 25vw;
+    position: relative;
+}
+.container_comentarii > label {
+   text-align: center;
+   font-size: large;
+   color: antiquewhite;
+   position: relative;
+
+}
+#comment{
+    background-color: rgb(164, 219, 252);
+}
+#addComments {
+    width: 20%;
+    padding: 5px;
+    background-color: rgb(145, 145, 145);
+    margin-bottom: 20px;
+    color: white;
+    align-self: center;
+}
+
+.wrapper > button {
+    margin-right: 5px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+}
+
+/* #allComments{
+    margin: 5vh;
+    width: 40%;
+    top: 10vh;
+    left: 30vw;
+    position: relative;
+} */
+
+#comment{
+    width: 50vw;
+    height: 10vh;
+    /* color: aliceblue; */
+
+}

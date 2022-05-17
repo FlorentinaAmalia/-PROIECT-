@@ -9,23 +9,20 @@
     <link rel="icon" href="/poze/index.ico" type="image/gif">
         <link rel="stylesheet" href="Produse.css">
         <script src="Produse.js"></script>
+        <!-- <script type="text/javascript" src="./app.js"></script> -->
 </head>
-<body onload="color()">
+<body>
 
         <div class="header_produse">
             <h1>Produse</h1>
         </div>
         <nav class="dropdown">
             <ul class="meniu">
-                <li><a href="home.html">Acasa</a></li>
+                <li><a href="hogfme.html">Acasa</a></li>
                 <li><a href="Produse.html">Produse</a>
-                    <!-- <ul class="submeniu">
-                        <li><a href="#home">Bine ați venit!</a></li>
-                        <li><a href="#scheduale">Program</a></li>
-                        <li><a href="#news">Noutăți</a></li>
-                        <li><a href="#notice">Anunțuri</a></li>
-                        <li><a href="galerie.html" target="_blank">Galerie</a></li>
-                    </ul> -->
+                    <ul class="submeniu">
+                        <li><a href="Comentarii.html">Comentarii</a></li>
+                    </ul>
                 </li>
                 <li>
                     <img src="/icons/lupa.png" id="lupa"><input id="searchbar" onkeyup="search_product()" type="text"
@@ -46,7 +43,9 @@
                     <li>Frecventa: 2,6 GHz</li>
                     <li>Capacitate: 8 GB</li>
                     <li>Capacitate SSD: 512 GB</li>
+                    <li class="pret">Pret: 2099.99 RON</li>
                 </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
         </div>
             <div class="grid-item" id="l2">
                 <img src="/poze_produse/laptop2.png"  class="laptop">
@@ -58,7 +57,9 @@
                     <li>Frecventa: 1,9 GHz</li>
                     <li>Capacitate: 16 GB</li>
                     <li>Capacitate SSD: 512 GB</li>
+                    <li class="pret">Pret: 3499.99 RON</li>
              </ul>
+             <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
             </div>
             <div class="grid-item" id="l3">
                 <img src="/poze_produse/laptop3.png" class="laptop">
@@ -69,7 +70,9 @@
                 <li>Frecventa: 2,3 GHz</li>
                 <li>Capacitate: 16 GB</li>
                 <li>Capacitate SSD: 512 GB </li>
+                <li class="pret">Pret: 3935.99 RON</li>
                 </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
         </div>
             <div class="grid-item" id="t1">
                 <img src="/poze_produse/telefon1.png" class="telefon">
@@ -81,7 +84,9 @@
                     <li>Nuclee: Octa Core</li>
                     <li>RAM: 4 GB</li>
                     <li>Sistem operare: Android OS</li>
-                </ul>  
+                    <li class="pret">Pret: 719.99 RON</li> 
+                </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>  
 
             </div>
             <div class="grid-item" id="t2">
@@ -93,7 +98,9 @@
                 <li>Nuclee: Hexa Core</li>
                 <li>RAM: 4 GB</li>
                 <li>Sistem operare: iOS</li>
+                <li class="pret">Pret: 5700.00 RON</li>
             </ul>
+            <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
 
             </div>
             <div class="grid-item" id="t3">
@@ -106,7 +113,9 @@
                <li> Nuclee: Octa Core</li>
                <li> RAM: 8 GB</li>
                <li> Sistem operare: Android OS</li>
+               <li class="pret">Pret: 5539.00 RON</li>
                 </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
 
             </div>
 
@@ -120,9 +129,11 @@
                   <li>  Capacitate RAM: 3 GB</li>
                   <li>  Capacitate: 32 GB</li>
                   <li>  Sistem de operare: Android 11</li>
+                  <li class="pret">Pret: 829.99 RON</li>
 
 
                 </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
             </div>
 
             <div class="grid-item" id="ta2">
@@ -135,10 +146,12 @@
               <li>  Capacitate RAM: 4 GB</li>
               <li>  Capacitate: 128 GB</li>
               <li>  Sistem de operare: Android 10</li>
+              <li class="pret">Pret: 729.99 RON</li>
                 </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
             </div>
 
-            <div class="grid-item" id="ta3">
+            <div class="grid-item" id="ta3" onclick="outStock()">
                 <img src="poze_produse/tableta3.png" class="tableta">
                 <ul class="produs_descriere">
                   <li> Tableta Apple iPad Air 2020</li>          
@@ -146,31 +159,60 @@
                   <li>  Rezolutie: 2360 x 1640 pixeli</li>
                   <li>  Capacitate: 64 GB</li>
                   <li>  Sistem de operare: iPadOS 14</li>
+                  <li class="pret">Pret: 2849.00 RON</li>
 
 
                 </ul>
+                <button id="addCos" onclick="outStockItem(this, 'adauga')">Adauga in cos!</button>
+                <div id="indisponibil"><span id="out">Out of stock!</span></div>
             </div>
           </div> 
 
           <div class="error">
           <iframe src="404.html" id="err"></iframe></div>
 
-
-          <div id="random">
-            <input type="radio" name="radioGroup" value="1"> roz<br>
-            <input type="radio" name="radioGroup" value="2"> rosu<br>
-            <input type="radio" name="radioGroup" value="3"> verde<br>
-            <input type="radio" name="radioGroup" value="4"> albastru<br>
-            <input type="radio" name="radioGroup" value="5"> galben<br>
-            </div>
-
-            <!-- <div id="rnd"></div> -->
             <div id="bg_image">
                 <img src="poze/background_site1.jpg" id="bg_img">
-                <img src="poze/background_site2.jpg" id="bg_img">
                 <img src="poze/background_site3.jpg" id="bg_img">
                 <img src="poze/background_site4.jpg" id="bg_img">
                 <img src="poze/background_site5.jpg" id="bg_img">
             </div>
+
+
+            <form id="comanda">
+                <div id="ch1">
+                    <label for="nume">Nume: </label>
+                    <input type="text" placeholder="Nume..." name="nume" id="comanda_item"/>
+                    <br>
+                    <label for="prenume">Prenume: </label>
+                    <input type="text" placeholder="Prenume..." name="prenume" id="comanda_item"/>
+                    
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="email" placeholder="Email...." name="email" id="comanda_item"/>
+                    
+                    <br>
+                    <label for="livrare">Livrare in aceeasi zi </label>
+                    <input type="checkbox" name="livrare" id="check">
+
+                    <br>
+                    <input type="submit" id="submit_cos" onclick="reset_cos()">
+                    <button id="resetCos" onclick="reset_cos()">Reseteaza cosul!</button>
+                </div>
+
+
+                <div id="ch2">
+                <div id="cos_comenzi">
+                    <p>Produse: </p>
+                    <div id="lista_produse" onclick="deleteButton(event)">
+                        <div id="produsId"></div>
+                    </div>
+                </div>
+                <div class="pretPlata">Ai de platit: <span id="plata">0</span> RON.</div>
+                </div>
+
+            </form>
     </body>
 </html>
+
+

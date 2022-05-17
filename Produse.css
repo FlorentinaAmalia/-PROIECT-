@@ -1,8 +1,11 @@
-
+body{
+  background-image: url("/poze/background_site1.jpg");
+}
 .header_produse h1{
     text-align: center;
     top: 30px;
     position: relative;
+    transform: scale(1.5);
 }
 
 .produs_descriere{
@@ -11,12 +14,21 @@
 
 ul.produs_descriere :first-child{
     font-size: large;
-
 }
+
+.produs_descriere{
+  margin-top: 5%;
+}
+#pret{
+  margin-top: 20px;
+}
+
+/* Drop-down */
 nav {
     height: 2rem;
     width: auto;
-    background-color: rgb(125, 188, 240);
+    /* background-color: rgb(125, 188, 240); */
+    background: linear-gradient(#ffffff,#edd9ff, #a461e2);
     position: sticky;
     top: 0em;
 }
@@ -24,6 +36,7 @@ nav {
 
 nav ul li a {
     text-decoration: none;
+    font-weight: bold;
     color: black;
     font-size: 1.2rem;
     display: block;
@@ -44,7 +57,8 @@ nav > ul.meniu li {
     flex-grow: 1;
     height: 2rem;
     line-height: 2rem;
-    background-color: rgb(125, 188, 240);
+    /* background-color: rgb(125, 188, 240); */
+    background: linear-gradient(#ffffff,#edd9ff, #a461e2);
 }
 
 nav > ul.meniu > li > ul.submeniu {
@@ -53,23 +67,42 @@ nav > ul.meniu > li > ul.submeniu {
 
 nav > ul.meniu > li:hover > ul.submeniu {
     visibility: visible;
-    background-color: rgb(125, 188, 240);
-    position: relative;
+    /* background-color: rgb(125, 188, 240); */
+    
+    background: linear-gradient(#ffffff,#edd9ff, #a461e2);
+    /* position: relative; */
 }
 
 nav > ul.meniu a:hover {
     transition: background-color 3s;
-    background-color: rgb(95, 149, 194);
+    background-color: #a461e2;
     color: rgb(0, 0, 0);
 }
 
 nav > ul.meniu li {
-    transition: background-color 3s;
+    transition: background-color 2s;
 }
 
+#lupa{
+    position: relative;
+    height: 1.5em;
+    top: 5px;
+    left: -2px;
+}
+  #searchbar{
+      width: 70%;
+      height: 1.5rem;
+      position: relative;
+      top: -2px;
+      border-radius: 10px;
+  }
+/* ___________________________ */
        
 
-            .grid-container {
+.grid-container {
+  margin-top: 3vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
   display: grid;
   grid-template-columns: auto auto auto ;
   /* background-color: #2196F3; */
@@ -82,6 +115,9 @@ nav > ul.meniu li {
   font-size: 15px;
   text-align: center;
   min-width: 450px;
+
+  /* !!!!! */
+  /* display: none; */
 }
 
 
@@ -101,7 +137,7 @@ nav > ul.meniu li {
     }
 }
 
-@media only screen and (max-width: 1000px) and (min-width: 601px){
+@media only screen and (max-width: 1100px) and (min-width: 601px){
     .grid-container
 	{
         display: grid;
@@ -121,17 +157,14 @@ nav > ul.meniu li {
 }
 
 @keyframes store {
-    from {background-color: rgb(102, 170, 197);}
-    to {background-color: rgb(85, 50, 182);}
+    /* from {background-color: rgb(102, 170, 197);}
+    to {background-color: rgb(85, 50, 182);} */
+
+    from {background: linear-gradient(#ffffff,#edd9ff, #a461e2);}
+    to {background: linear-gradient(#a461e2,#edd9ff, #ffffff);}
   }
 
-  #searchbar{
-      width: 70%;
-      height: 1.5rem;
-      position: relative;
-      top: -2px;
-      border-radius: 10px;
-  }
+
 
   /* input[type=text] {
     width: 30%;
@@ -181,9 +214,84 @@ body{
   border: 1px solid black;
 }
 
-#lupa{
-    position: relative;
-    height: 1.5em;
-    top: 5px;
-    left: -2px;
+
+
+
+
+
+
+
+
+
+
+
+/* .container {
+    display: flex;
+    width: 1000px;
+    height: 500px;
+  }
+  
+  .container :nth-child(1) {
+    background: lightblue;
+    flex: 2;
+  }
+  
+  .container :nth-child(2) {
+    background: lightcoral;
+    flex: 2;
+  }
+  
+  .container :nth-child(3) {
+    background: lightgreen;
+    flex: 2;
+  } */
+
+
+
+
+
+
+
+#comanda {
+  display: flex;
+  margin-top: 2vh;
+  flex-direction: row;
+  padding: 15px;
+  background-color: rgb(97, 223, 223);
+}
+
+
+#comanda_item{
+  width: 60%;
+}
+#ch1 {
+  width: 50%;
+}
+#ch2{
+  width: 50%;
+}
+
+#lista_produse{
+  list-style: none;
+}
+
+#indisponibil{
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  /* left: -50px; */
+  background-color: red;
+  font-size: x-large;
+  position: relative;
+}
+
+#out{
+  position: relative;
+  left: -20%;
+}
+
+.grid-item:hover{
+  /* width: 300px; */
+  transform: scale(1.1); 
+  margin: 2px solid black;
 }

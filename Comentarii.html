@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Comentarii.css">
+</head>
+<body>
+    <nav class="dropdown">
+        <ul class="meniu">
+            <li><a href="hogfme.html">Acasa</a></li>
+            <li><a href="Produse.html">Produse</a>
+                <ul class="submeniu">
+                    <li><a href="Comentarii.html">Comentarii</a></li>
+                </ul>
+            </li>
+            <li>
+                <img src="/icons/lupa.png" id="lupa"><input id="searchbar" onkeyup="search_product()" type="text"
+                name="search" placeholder="Cauta produsul..."></li>
+
+      </nav>
+
+<div class="container_comentarii">
+    <label for="comment" name="comment">Adauga un comentariu!</label>
+    <textarea id="comment"></textarea>
+    <button id="addComments">Add</button>
+    <div id="allComments"></div>
+</div>
+<script src="Comentarii.js"></script>
+</body>
+</html>
