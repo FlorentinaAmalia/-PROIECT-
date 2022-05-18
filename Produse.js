@@ -5,7 +5,18 @@ function search_product() {
       
     let stop = 0;
     let cat = document.getElementById("err") || document.getElementById("err_show");
-    cat.id = "err";
+    
+    // cat.id = "err";
+    const cssObj = window.getComputedStyle(cat, null);
+    let vis = cssObj.getPropertyValue("visibility");
+        if(vis == "visible"){
+            cat.id = "err";
+        }
+
+    
+
+
+
 
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
@@ -31,7 +42,6 @@ function search_product() {
 
 function color(){
     const c = localStorage.getItem('culoare') || "url('poze/background_site1.jpg')";
-// console.log(c);
 document.body.style.backgroundImage = c;
     }
 
@@ -46,35 +56,11 @@ document.body.style.backgroundImage = colors[randomNumber];
 }
 
 
-// setTimeout(window.onload,1000);
 setInterval(callRandom,5000);
 
 
 
 
-// function adaugaInCos(element){
-//     // console.log("AA");
-//     const button = document.getElementById("addCos");
-
-//     const div = document.getElementById("cos_comenzi");
-//     element = button.parentElement;
-//     // elem.innerHTML = button.parentElement;
-//     // let e = elem.getElementsByClassName("pret");
-    
-//     alert(element.parentNode.parentNode.id)
-//     // elem.innerHTML = button.parentElement();
-//     console.log(element);
-//     div.append(element);
-
-//     let gridd = document.getElementsByClassName("grid-item");
-//     // console.log(gridd[2]);
-//     // if(div.append(element)){
-//     // // div.append(gridd[2]);}
-//     // console.log("BB");}
-//     // else{
-//     //     console.log("AA");
-//     // }
-// }
 
 function adaugaInCos(elem, val){
     // console.log(elem.parentNode.children.item(1).innerHTML); // lista
@@ -168,7 +154,6 @@ function pret(){
     var produse = document.getElementById("lista_produse");
     produse.innerHTML = localStorage.getItem("produse");
     document.querySelector("#check").addEventListener("click", function(event) {
-        // document.getElementById("output-box").innerHTML = "Scuze! In aceasta perioada nu putem face livrari rapide!";
         alert("Scuze! In aceasta perioada nu putem face livrari rapide!");
         event.preventDefault();
 }, false);
@@ -194,6 +179,38 @@ function outStockItem(element, val){
     event.stopPropagation();
 }
 
+function handleSubmit(event){
+    let nume = document.querySelector('[name="nume"]').value;
+    let prenume = document.querySelector('[name="prenume"]').value;
+    let mail = document.querySelector('[name="email"]').value;
+    let regex = /^[A-Za-z-]+$/;
+    let regex_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+
+    
+    var plata = localStorage.getItem("pretTotalCos");
+
+
+    if(!regex.test(nume)){
+        alert("Numele introdus este gresit!");
+    }
+        else if(!regex.test(prenume)){
+            alert("Prenumele introdus este gresit!");
+        }
+        else if(!regex_email.test(mail)){
+            alert("Email-ul introdus este gresit!");
+        }
+        else if(plata == "0"){
+            alert("Nu ati introdus produse in cos!");
+        }
+        else{
+            reset_cos();
+            document.getElementById("ch1").reset();
+            alert("Comanda a fost facuta!");
+        }
+    
+    event.preventDefault();
+}
 
 var addFunctionOnWindowLoad = function(callback){
     if(window.addEventListener){
@@ -203,17 +220,19 @@ var addFunctionOnWindowLoad = function(callback){
     }
 }
 
-// document.getElementById("deleteButton").addEventListener('click', function(e){
-//     if(e.target.className == "deleteButton"){
-//         // e.target.parentElement.remove();
-//         console.log(e.target.parentElement);
-//     }
-//     else{
 
-//         console.log(e.target.parentElement, "AAAAAAAAA");
-//     };
-// })
-
+function boundingCliend(){
+    const element = document.getElementById("body");
+    const elemStil = element.getBoundingClientRect();
+        let sfarsit = document.getElementById("josPagina") || document.getElementById("josPagina_show");
+    if(elemStil.bottom < 930){
+        setTimeout(function(){
+        sfarsit.id = "josPagina_show";},5000)
+    }
+    else{
+        sfarsit.id = "josPagina";
+    }
+};
 
 addFunctionOnWindowLoad(color);
 addFunctionOnWindowLoad(pret);

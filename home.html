@@ -1,42 +1,91 @@
-<html>
-    <head>
-        <title>Magazin online</title>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Magazin online</title><link rel="icon" href="/poze/index.ico" type="image/gif">
         <link rel="stylesheet" href="Home.css">
-    </head>
+        <script src="Home.js"></script>
+</head>
+<body onclick="myFunction(event); this.onclick=null;"">
+    
+    <div class="header_home">
+        <h1>Home</h1>
+    </div>
+    <nav class="dropdown">
+        <ul class="meniu">
+            <li><a href="home.html">
+                <img src="/icons/home.png" id="icon_home"><span id="Home">Acasa</span></a></li>
+            <li><a href="Produse.html">
+                <img src="/icons/produse.png" id="icon_produse"><span id="span_produse">Produse</span></a>
+            </li>
+            <li><a href="Produse.html#ch2">
+                <img src="/icons/cos_cumparaturi.png" id="icon_cos">
+                <span id="cumparaturi">Cos de cumparaturi</span></a>
+            </li>
+            <li><a href="Produse.html" id="search">
+                <img src="/icons/lupa.png" id="lupa"><input id="searchbar" onkeyup="search_product()" type="text"
+                name="search" placeholder="Cauta produsul..."></a>
+            </li>
 
-<body>
-  <nav class="dropdown">
-    <ul class="meniu">
-        <li><a href="home.html">Acasa</a></li>
-        <li><a href="Produse.html">Produse</a>
-            <!-- <ul class="submeniu">
-                <li><a href="#home">Bine ați venit!</a></li>
-                <li><a href="#scheduale">Program</a></li>
-                <li><a href="#news">Noutăți</a></li>
-                <li><a href="#notice">Anunțuri</a></li>
-                <li><a href="galerie.html" target="_blank">Galerie</a></li>
-            </ul> -->
-        </li>
-        <li>
-            <img src="/icons/lupa.png" id="lupa"><input id="searchbar" onkeyup="search_product()" type="text"
-            name="search" placeholder="Cauta produsul..."></li>
+      </nav>
 
-  </nav>
+    <div id="reclama_noVisibility">
+        <span class="s1">Cumpara acum!</span>
+        <br>
+        <span class="s2">Preturi incredibil de mici!</span>
+    </div>
+  <div class="container">
+    <div class="flex-item" id="l1">
+        <img src='/poze_produse/laptop1.png' class="laptop">
+            <div class="pret">Pret: 2099.99 RON</div>
+</div>
+    <div class="flex-item" id="l2">
+        <img src="/poze_produse/laptop2.png"  class="laptop">
+    
+            <div class="pret">Pret: 3499.99 RON</div>
+    </div>
+    <div class="flex-item" id="l3">
+        <img src="/poze_produse/laptop3.png" class="laptop">
+        <div class="pret">Pret: 3935.99 RON</div>
+        
+</div>
+    <div class="flex-item" id="t1">
+        <img src="/poze_produse/telefon1.png" class="telefon">
+            <div class="pret">Pret: 719.99 RON</div> 
+        
 
-  <input type="text" id="comment-box" placeholder="Enter comment">
-  <button id="post">Post</button>
-  <ul id="unordered">
-     
- </ul>
-<div class="container">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  
+    </div>
+    <div class="flex-item" id="t2">
+        <img src="/poze_produse/telefon2.png" class="telefon">
+        <div class="pret">Pret: 5700.00 RON</div>
+    
+
+    </div>
+    <div class="flex-item" id="t3">
+        <img src="poze_produse/telefon3.png" class="telefon">
+       <div class="pret">Pret: 5539.00 RON</div>
+        
+
+    </div>
+
+    <div class="flex-item" id="ta1">
+        <img src="poze_produse/tableta1.png" class="tableta">
+          <div class="pret">Pret: 829.99 RON</div>
+
+
+        
+    </div>
+
+    <div class="flex-item" id="ta2">
+        <img src="poze_produse/tableta2.png" class="tableta">
+      <div class="pret">Pret: 729.99 RON</div>
+        
+    </div>
           
+
 
 </body>
 </html>

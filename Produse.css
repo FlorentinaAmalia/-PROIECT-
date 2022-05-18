@@ -1,11 +1,26 @@
 body{
   background-image: url("/poze/background_site1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .header_produse h1{
+  margin-top: 0.5vh;
+  font-family: "Brush Script MT", "Courier New", monospace;
     text-align: center;
-    top: 30px;
+    top: -0.3vh;
+    color: rgb(12, 11, 12);
     position: relative;
-    transform: scale(1.5);
+    font-size: 15vh;
+}
+
+
+.header_produse{
+    height: 20vh;
+    border-radius: 50px;
+    animation: store 5s infinite;
+    position: relative;
+    
 }
 
 .produs_descriere{
@@ -24,24 +39,32 @@ ul.produs_descriere :first-child{
 }
 
 /* Drop-down */
+
 nav {
-    height: 2rem;
-    width: auto;
-    /* background-color: rgb(125, 188, 240); */
-    background: linear-gradient(#ffffff,#edd9ff, #a461e2);
-    position: sticky;
-    top: 0em;
+  /* height: 2rem; */
+  height: 5vh;
+  width: auto;
+  background: linear-gradient(#ffffff,#edd9ff, #a461e2);
+  /* position: sticky; */
+  position: sticky;
+  top: 0em;
 }
 
+/* #meniu, #submeniu{
+  position: absolute;
+} */
 
 nav ul li a {
+  position: sticky;
     text-decoration: none;
     font-weight: bold;
     color: black;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: 2.5vh;
     display: block;
     height: 100%;
 }
+
 
 nav ul {
     list-style-type: none;
@@ -55,8 +78,8 @@ nav > ul.meniu {
 
 nav > ul.meniu li {
     flex-grow: 1;
-    height: 2rem;
-    line-height: 2rem;
+    height: 5vh;
+    /* line-height: 2rem; */
     /* background-color: rgb(125, 188, 240); */
     background: linear-gradient(#ffffff,#edd9ff, #a461e2);
 }
@@ -85,17 +108,31 @@ nav > ul.meniu li {
 
 #lupa{
     position: relative;
-    height: 1.5em;
-    top: 5px;
+    height: 3vh;
+    top: 1vh;
     left: -2px;
 }
   #searchbar{
       width: 70%;
-      height: 1.5rem;
+      height: 3vh;
       position: relative;
       top: -2px;
       border-radius: 10px;
   }
+  #cumparaturi, #Home, #span_produse{
+    position: relative;
+    top: -5px;
+    right: -5px;
+  }
+
+  #icon_cos, #icon_home, #icon_produse{
+    position: relative;
+    width: 1.5em;
+    /* top: -28px;
+    left: -100px; */
+  }
+
+
 /* ___________________________ */
        
 
@@ -115,9 +152,6 @@ nav > ul.meniu li {
   font-size: 15px;
   text-align: center;
   min-width: 450px;
-
-  /* !!!!! */
-  /* display: none; */
 }
 
 
@@ -126,6 +160,16 @@ nav > ul.meniu li {
                 width: 250px;
             }
 
+
+/* @media only screen and (min-width : 300px) and (max-width: 500px){
+  nav {
+    height: 25vh;
+    width: auto;
+    background: linear-gradient(#ffffff,#edd9ff, #a461e2);
+    position: sticky;
+    top: 0em;
+}
+} */
 
 
 @media only screen and (max-width: 600px) {
@@ -148,13 +192,7 @@ nav > ul.meniu li {
 
 
 
-.header_produse{
-    height: 100px;
-    border-radius: 50px;
-    animation: store 5s infinite;
-    position: relative;
-    
-}
+
 
 @keyframes store {
     /* from {background-color: rgb(102, 170, 197);}
@@ -184,11 +222,13 @@ nav > ul.meniu li {
 
   #err{
     display: none;
+    visibility: hidden;
   }
 
-  #err{
-    width: 100vw;
-    height: 100vh;
+  #err_show{
+    width: 100%;
+    height: 100%;
+    /* visibility: visible; */
     /* display: block; */
 }
 
@@ -202,11 +242,7 @@ nav > ul.meniu li {
     display: none;
 }
 
-body{
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 
 #rnd{
     width: 100%;
@@ -215,67 +251,41 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/* .container {
-    display: flex;
-    width: 1000px;
-    height: 500px;
-  }
-  
-  .container :nth-child(1) {
-    background: lightblue;
-    flex: 2;
-  }
-  
-  .container :nth-child(2) {
-    background: lightcoral;
-    flex: 2;
-  }
-  
-  .container :nth-child(3) {
-    background: lightgreen;
-    flex: 2;
-  } */
-
-
-
-
-
-
-
 #comanda {
   display: flex;
-  margin-top: 2vh;
-  flex-direction: row;
+  flex-direction: column;
+  /* column-gap: 20vw; */
   padding: 15px;
-  background-color: rgb(97, 223, 223);
 }
 
 
 #comanda_item{
-  width: 60%;
+  width: 50%;
 }
 #ch1 {
+  position: relative;
+  left: 20%;
+  font-size: large;
   width: 50%;
+  background-color: #d761e2;
+  padding: 20px;
+  /* padding: 15px; */
 }
 #ch2{
-  width: 50%;
+  margin-top: 10vh;
+  width: 40%;
+  background-color: #ffa1f2;
+  padding: 15px;
+  position: relative;
+  left: 25%;
+  font-size: large;
 }
 
 #lista_produse{
   list-style: none;
 }
 
-#indisponibil{
+#ta3 #indisponibil{
   padding: 10px;
   width: 100%;
   text-align: center;
@@ -295,3 +305,39 @@ body{
   transform: scale(1.1); 
   margin: 2px solid black;
 }
+
+#josPagina{
+  height: 20vh;
+  /* margin: 20px 35vh 5vh 35vh;    */
+  
+  margin-top: 10vh;
+  
+  /* background-color: aqua; */
+  visibility: hidden;
+}
+
+#josPagina_show{
+  height: 20vh;
+  /* margin: 1000px 35vh 5vh 35vh;   */
+  margin-top: 10vh;
+  font-size: 5vh;
+  text-align: center;
+  border-radius: 20vh;
+  color: #edd9ff;
+  font-family: "Brush Script MT", "Courier New", monospace;
+  background-color: rgb(146, 0, 114);
+  visibility: visible;
+}
+
+#mesajSfarsit{
+  position: relative;
+  top: 3vh;
+}
+
+#reguliFormular li{
+  /* list-style: none; */
+  font-size: medium;
+  margin-left: 30px;
+}
+
+

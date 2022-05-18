@@ -1,21 +1,54 @@
+body{
+  background-image: url("/poze/background_site4.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header_home h1{
+  margin-top: 0.5vh;
+  font-family: "Brush Script MT", "Courier New", monospace;
+    text-align: center;
+    top: -0.3vh;
+    color: rgb(12, 11, 12);
+    position: relative;
+    font-size: 15vh;
+}
+
+  .header_home{
+    height: 15vh;
+    border-radius: 100px;
+    animation: store 5s infinite;
+    position: relative;
+    
+}
+
+
+
 
 /* Drop-down */
+
 nav {
-    height: 2rem;
+    height: 5vh;
     width: auto;
-    background-color: rgb(125, 188, 240);
+    background: linear-gradient(#ffffff,#edd9ff, #a461e2);
     position: sticky;
     top: 0em;
 }
 
+#meniu, #submeniu{
+  position: absolute;
+}
 
 nav ul li a {
+  position: sticky;
     text-decoration: none;
+    font-weight: bold;
     color: black;
-    font-size: 1.2rem;
+    font-size: 2.5vh;
     display: block;
     height: 100%;
 }
+
 
 nav ul {
     list-style-type: none;
@@ -29,9 +62,8 @@ nav > ul.meniu {
 
 nav > ul.meniu li {
     flex-grow: 1;
-    height: 2rem;
-    line-height: 2rem;
-    background-color: rgb(125, 188, 240);
+    height: 5vh;
+    background: linear-gradient(#ffffff,#edd9ff, #a461e2);
 }
 
 nav > ul.meniu > li > ul.submeniu {
@@ -40,50 +72,105 @@ nav > ul.meniu > li > ul.submeniu {
 
 nav > ul.meniu > li:hover > ul.submeniu {
     visibility: visible;
-    background-color: rgb(125, 188, 240);
-    position: relative;
+    
+    background: linear-gradient(#ffffff,#edd9ff, #a461e2);
 }
 
 nav > ul.meniu a:hover {
     transition: background-color 3s;
-    background-color: rgb(95, 149, 194);
+    background-color: #a461e2;
     color: rgb(0, 0, 0);
 }
 
 nav > ul.meniu li {
-    transition: background-color 3s;
+    transition: background-color 2s;
 }
 
 #lupa{
-    position: relative;
-    height: 1.5em;
-    top: 5px;
-    left: -2px;
+  position: relative;
+  height: 3vh;
+  top: 1vh;
+  left: -2px;
 }
+#searchbar{
+    width: 70%;
+    height: 3vh;
+    position: relative;
+    top: -2px;
+    border-radius: 10px;
+}
+  #cumparaturi, #Home, #span_produse{
+    position: relative;
+    top: -5px;
+    right: -5px;
+  }
 
+  #icon_cos, #icon_home, #icon_produse{
+    position: relative;
+    width: 1.5em;
+  }
+
+
+
+
+@keyframes store {
+
+  from {background: linear-gradient(#ffffff,#edd9ff, #a461e2);}
+  to {background: linear-gradient(#a461e2,#edd9ff, #ffffff);}
+}
 /* ___________________________ */
 
-
+.laptop , .telefon, .tableta{
+  float: left;
+  width: 250px;
+}
 
 
 .container {
+  margin-top: 3vh;
     display: flex;
-    width: 1000px;
-    height: 500px;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    justify-content: space-around;
+  }
+  .container > .flex-item:nth-child(2n+1){
+    background: rgb(255, 136, 245);
+  }
+
+  .container > .flex-item:nth-child(2n+2){
+    background: rgb(136, 217, 255);
   }
   
-  .container :nth-child(1) {
-    background: lightblue;
-    flex: 2;
+
+
+  #reclama_noVisibility{
+    display: none;
   }
-  
-  .container :nth-child(2) {
-    background: lightcoral;
-    flex: 2;
+  #reclama{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    right: 25%;
+    font-size: 10vh;
+    text-align: center;
+    bottom: 25%;
+    animation: reclama 2s;
+    color: #edd9ff;
+    background-color:rgb(73, 17, 126);
   }
-  
-  .container :nth-child(3) {
-    background: lightgreen;
-    flex: 2;
+
+  @keyframes reclama{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  
+
+  .s2{
+    position: relative;
+    margin-left: 30px;
+  }
