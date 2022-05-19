@@ -8,10 +8,15 @@ body{
   margin-top: 0.5vh;
   font-family: "Brush Script MT", "Courier New", monospace;
     text-align: center;
-    top: -0.3vh;
+    top: -3vh;
     color: rgb(12, 11, 12);
     position: relative;
     font-size: 15vh;
+}
+
+.header_home h1::first-letter{
+  
+  font-size: 18vh;
 }
 
   .header_home{
@@ -249,7 +254,3 @@ nav > ul.meniu li {
       order: 7; 
       }
 
-
-      #butoane{
-        margin-left: 1vw;
-      }
