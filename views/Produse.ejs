@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin online</title>
+    <!-- <link rel="shortcut icon" href="/poze/kitty1.gif" type="image/x-icon"> -->
+    <link rel="icon" href="/poze/index.ico" type="image/gif">
+        <link rel="stylesheet" href="Produse.css">
+        <script src="Produse.js"></script>
+        <!-- <script type="text/javascript" src="./app.js"></script> -->
+</head>
+<body id="body" onscroll="boundingCliend()">
+
+        <div class="header_produse">
+            <h1>Produse</h1>
+        </div>
+        <nav class="dropdown">
+            <ul class="meniu">
+                <li><a href="home.html">
+                    <img src="/icons/home.png" id="icon_home"><span id="Home">Acasa</span></a></li>
+                <li><a href="Produse.html">
+                    <img src="/icons/produse.png" id="icon_produse"><span id="span_produse">Produse</span></a>
+            
+                </li>
+                <li><a href="#ch2">
+                    <img src="/icons/cos_cumparaturi.png" id="icon_cos">
+                    <span id="cumparaturi">Cos de cumparaturi</span></a><ul class="submeniu">
+                <li><a href="#ch1">Comanda</a></li>
+            </ul>
+                </li>
+                <li>
+                    <img src="/icons/lupa.png" id="lupa"><input id="searchbar" onkeyup="search_product()" type="text"
+                    name="search" placeholder="Cauta produsul...">
+                </li>
+
+          </nav>
+
+          <div class="grid-container">
+            <div class="grid-item" id="l1">
+                <img src='/poze_produse/laptop1.png' class="laptop">
+                <ul class="produs_descriere">
+                    <li>Notebook Laptop Acer Aspire 5 A515-45</li>
+                    <li>Diagonala: 15.6 inch</li>
+                    <li>Familie: Ryzen 3 5000 Series</li>
+                    <li>Frecventa: 2,6 GHz</li>
+                    <li>Capacitate: 8 GB</li>
+                    <li>Capacitate SSD: 512 GB</li>
+                    <li class="pret">Pret: 2099.99 RON</li>
+                </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
+        </div>
+            <div class="grid-item" id="l2">
+                <img src="/poze_produse/laptop2.png"  class="laptop">
+            
+                <ul class="produs_descriere">
+                    <li> Ultrabook IdeaPad 5 Pro 14ACN6</li>
+                    <li>Diagonala: 14 inch</li>
+                    <li>Familie: Ryzen 7 5000 Series</li>
+                    <li>Frecventa: 1,9 GHz</li>
+                    <li>Capacitate: 16 GB</li>
+                    <li>Capacitate SSD: 512 GB</li>
+                    <li class="pret">Pret: 3499.99 RON</li>
+             </ul>
+             <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
+            </div>
+            <div class="grid-item" id="l3">
+                <img src="/poze_produse/laptop3.png" class="laptop">
+                <ul class="produs_descriere">
+                <li>Ultrabook Yoga Slim 9 14ITL5</li>
+                <li>Diagonala: 13.3 inch</li>
+                <li>Familie: Ryzen 5 5000 Series</li>
+                <li>Frecventa: 2,3 GHz</li>
+                <li>Capacitate: 16 GB</li>
+                <li>Capacitate SSD: 512 GB </li>
+                <li class="pret">Pret: 3935.99 RON</li>
+                </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
+        </div>
+            <div class="grid-item" id="t1">
+                <img src="/poze_produse/telefon1.png" class="telefon">
+                    <ul class="produs_descriere">      
+                    <li>Smartphone Samsung Galaxy A03</li>
+                    <li>Rezolutie: 720 x 1600 pixeli</li>
+                    <li>Marime display: 6.5 inch</li>
+                    <li>Frecventa: 1600 MHz</li>
+                    <li>Nuclee: Octa Core</li>
+                    <li>RAM: 4 GB</li>
+                    <li>Sistem operare: Android OS</li>
+                    <li class="pret">Pret: 719.99 RON</li> 
+                </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>  
+
+            </div>
+            <div class="grid-item" id="t2">
+                <img src="/poze_produse/telefon2.png" class="telefon">
+            <ul class="produs_descriere">
+                <li>Smartphone Apple iPhone 13</li>
+                <li>Rezolutie: 1170 x 2532 pixeli</li>
+                <li>Marime display: 6.1 inch</li>
+                <li>Nuclee: Hexa Core</li>
+                <li>RAM: 4 GB</li>
+                <li>Sistem operare: iOS</li>
+                <li class="pret">Pret: 5700.00 RON</li>
+            </ul>
+            <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
+
+            </div>
+            <div class="grid-item" id="t3">
+                <img src="poze_produse/telefon3.png" class="telefon">
+                <ul class="produs_descriere">
+                <li>Smartphone Samsung Galaxy S22</li>
+                <li>Rezolutie: 1080 x 2340 pixeli</li>
+               <li> Marime display: 6.1 inch</li>
+               <li> Frecventa: 2800 + 2500 + 1700 MHz</li>
+               <li> Nuclee: Octa Core</li>
+               <li> RAM: 8 GB</li>
+               <li> Sistem operare: Android OS</li>
+               <li class="pret">Pret: 5539.00 RON</li>
+                </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
+
+            </div>
+
+            <div class="grid-item" id="ta1">
+                <img src="poze_produse/tableta1.png" class="tableta">
+                <ul class="produs_descriere">
+                <li>Tableta Samsung Galaxy Tab A8</li>
+                  <li>  Diagonala: 10.5 inch</li>
+                  <li>  Rezolutie: 1920 x 1200 pixeli</li>
+                  <li>  Frecventa: 2000 + 2000 MHz</li>
+                  <li>  Capacitate RAM: 3 GB</li>
+                  <li>  Capacitate: 32 GB</li>
+                  <li>  Sistem de operare: Android 11</li>
+                  <li class="pret">Pret: 829.99 RON</li>
+
+
+                </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
+            </div>
+
+            <div class="grid-item" id="ta2">
+                <img src="poze_produse/tableta2.png" class="tableta">
+                <ul class="produs_descriere">
+                <li>Tableta Huawei MatePad T10s</li>
+               <li> Diagonala: 10.1 inch</li>
+               <li> Rezolutie: 1920 x 1200 pixeli</li>
+               <li> Frecventa: 2000 + 1700 MHz</li>
+              <li>  Capacitate RAM: 4 GB</li>
+              <li>  Capacitate: 128 GB</li>
+              <li>  Sistem de operare: Android 10</li>
+              <li class="pret">Pret: 729.99 RON</li>
+                </ul>
+                <button id="addCos" onclick="adaugaInCos(this, 'adauga')">Adauga in cos!</button>
+            </div>
+
+            <div class="grid-item" id="ta3" onclick="outStock()">
+                <img src="poze_produse/tableta3.png" class="tableta">
+                <ul class="produs_descriere">
+                  <li> Tableta Apple iPad Air 2020</li>          
+                  <li>  Diagonala: 10.9 inch</li>
+                  <li>  Rezolutie: 2360 x 1640 pixeli</li>
+                  <li>  Capacitate: 64 GB</li>
+                  <li>  Sistem de operare: iPadOS 14</li>
+                  <li class="pret">Pret: 2849.00 RON</li>
+
+
+                </ul>
+                <button id="addCos" onclick="outStockItem(this, 'adauga')">Adauga in cos!</button>
+                <div id="indisponibil"><span id="out">Out of stock!</span></div>
+            </div>
+          </div> 
+
+          <div class="error">
+          <iframe src="404.html" id="err"></iframe></div>
+
+            <div id="bg_image">
+                <img src="poze/background_site1.jpg" id="bg_img">
+                <img src="poze/background_site3.jpg" id="bg_img">
+                <img src="poze/background_site4.jpg" id="bg_img">
+                <img src="poze/background_site5.jpg" id="bg_img">
+            </div>
+
+
+            <div id="comanda">
+                <form id="ch1">
+                    <label for="nume">Nume: </label>
+                    <input type="text" placeholder="Nume..." name="nume" id="comanda_item"/>
+                    <br>
+                    <label for="prenume">Prenume: </label>
+                    <input type="text" placeholder="Prenume..." name="prenume" id="comanda_item"/>
+                    
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="email" placeholder="Email...." name="email" id="comanda_item"/>
+                    
+                    <br>
+                    <label for="livrare">Livrare in aceeasi zi </label>
+                    <input type="checkbox" name="livrare" id="check">
+
+                    <br>
+                    <input type="submit" id="submit_cos" onclick="handleSubmit(event)">
+                    <button id="resetCos" onclick="reset_cos()">Reseteaza comanda!</button>
+
+                    <div id="reguliFormular">
+                        <ul> Reguli pentru completarea formularului
+                            <li>
+                                Numele multiple sunt scrise cu " - " intre.
+                            </li>
+                            <li>
+                                Prenumele multiple sunt scrise cu " - " intre.
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+
+                <div id="ch2">
+                <div id="cos_comenzi">
+                    <p>Produse: </p>
+                    <div id="lista_produse" onclick="deleteButton(event)">
+                        <div id="produsId"></div>
+                    </div>
+                </div>
+                <div class="pretPlata">Ai de platit: <span id="plata">0</span> RON.</div>
+                </div>
+
+            </div>
+
+            <div id="josPagina"><span id="mesajSfarsit">Mutumim ca ne-ati vizitat site-ul! <br> Va uram o zi placuta!</span>
+            </div>
+</body>
+</html>
+
+

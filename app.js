@@ -1,20 +1,29 @@
-var express = require('express');
-var app = express();
 
-app.use(express.static('public'));
-
-app.get('/', function (req, res) {
-    res.send('Hello World!');
-});
+const http = require("http");
+const hostname = '127.0.0.1';
 
 
+const express = require('express');
+const app = express();
+const port = 5500;
 
-// Handle 404 - Keep this as a last route
-app.use(function(req, res, next) {
-    res.status(404);
-    res.send('404: File Not Found');
-});
 
-app.listen(5500, function () {
-    console.log('Example app listening on port 5500!');
-});
+
+app.get("*",(req,res)=>{
+    res.sendFile(__dirname + "/404.html")
+    // res,send("404 page")
+})
+
+// app.all('*', (req, res) => {
+//     res.render("404", {title:"404"})
+//     // res.sendFile(`${__dirname}/404.html`);
+// });
+
+// app.use((req, res, next) => {
+//     res.status(404).sendFile("404.html");
+//   });
+
+app.listen(5500, ()=>{
+    // console.log("App listen 5500");
+    console.log(`Server running at http://${hostname}:${port}/`);
+})

@@ -174,3 +174,82 @@ nav > ul.meniu li {
     position: relative;
     margin-left: 30px;
   }
+
+
+  .buton {
+    margin-top: 2vh;
+    border:2px rgb(7, 4, 4) ;
+    background: #ca88f7;
+    font-weight:bold;
+    color:white;
+    text-shadow:0px 0px 4px black,0px 0px 3px black,0px 0px 2px black,0px 0px 2px black;
+    /* box-shadow:0px -3px 2px grey; */
+    height:2em;
+    line-height:2em;
+    width:auto;
+    text-align:center;
+    display:inline-block;
+    font-size:0.9em;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+  }
+  
+  .buton:hover{
+    background:orange;
+  }
+  #ord_crescator:hover ~ .container > :nth-child(1){
+    order: 4;
+    }
+    #ord_crescator:hover ~ .container > :nth-child(2){
+    order: 5;
+    }
+    #ord_crescator:hover ~ .container > :nth-child(3){
+    order: 6;
+    }
+    #ord_crescator:hover ~ .container > :nth-child(4){
+    order: 1;
+    }
+    #ord_crescator:hover ~ .container > :nth-child(5){
+    order: 8;
+    }
+    #ord_crescator:hover ~ .container > :nth-child(6){
+    order: 7;
+    }
+    #ord_crescator:hover ~ .container > :nth-child(7){
+    order: 3;
+    }
+    #ord_crescator:hover ~ .container > :nth-child(8){
+    order: 2;
+    }
+
+
+
+    #ord_descrescator:hover ~ .container > :nth-child(1){
+      order: 5;
+      }
+      #ord_descrescator:hover ~ .container > :nth-child(2){
+      order: 4;
+      }
+      #ord_descrescator:hover ~ .container > :nth-child(3){
+      order: 3;
+      }
+      #ord_descrescator:hover ~ .container > :nth-child(4){
+      order: 8;
+      }
+      #ord_descrescator:hover ~ .container > :nth-child(5){
+      order: 1;
+      }
+      #ord_descrescator:hover ~ .container > :nth-child(6){
+      order: 2;
+      }
+      #ord_descrescator:hover ~ .container > :nth-child(7){
+      order: 6;
+      }
+      #ord_descrescator:hover ~ .container > :nth-child(8){
+      order: 7; 
+      }
+
+
+      #butoane{
+        margin-left: 1vw;
+      }
